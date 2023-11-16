@@ -1,0 +1,76 @@
+html {
+  background-color: #fafafa;
+}
+
+h4 {
+  margin: 0;
+}
+
+input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 25px;
+  height: 25px;
+  z-index: 1;
+}
+
+.crowd-radio {
+  position: relative;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border: solid 1px #f1f1f1;;
+  border-radius: 50%;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}
+
+input[type=radio]:checked ~ .crowd-radio:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 4px;
+  left: 4px;
+  background-color: #3bb5aa;
+  border: solid 0.5px #f1f1f1;
+  border-radius: 50%;
+}
+
+.card.selected {
+  box-shadow: 0 0 30px #f2ffff;
+  border: solid 2px rgb(117 174 168);
+}
+
+.card.selecionar {
+  cursor: pointer;
+}
+
+.card-footer {
+  background-color: white;
+}
+
+.btn-primary {
+  background-color: #3cb4ab;
+  border: solid 1px #52b3a6;
+  border-radius: 25px;
+  padding: 14px 30px;
+}
+
+.bookmark {
+  padding: 0 10px 0 0;
+  background-color: #f4f4f4;
+  border: 1px solid #f4f4f4;
+  color: #7c7c7c;
+}
+
+.bookmark > span {
+  background-color: #2f2f2f;
+  color: #b1b1b1;
+  height: 100%;
+  padding: 18px;
+  border-radius: 25px;
+  margin-left: -1px;
+  margin-right: 5px;
+}
