@@ -1,3 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+:root {
+  font-size: 16px;
+}
+* {
+  font-family: 'Commissioner', sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+p {
+  filter: opacity(0.7);
+}
+
+.text-stand-left {
+  filter: opacity(0.7);
+  margin-left: 10px;
+}
+
+.card-divider {
+  width: 1px;
+  height: 50px;
+  max-height: 100%;
+  border-left: 1px hsl(0, 0%, 48%) solid;
+}
+
+.logo {
+  background: url("../../assets/images/logo.svg") no-repeat;
+  text-indent: -99999px;
+  width: 130px;
+}
+
+header {
+  background: url("../../assets/images/image-hero-desktop.jpg") no-repeat;
+  background-size: contain;
+  height: 400px;
+}
+
+.main-content {
+  margin-top: -100px;
+}
+
 html {
   background-color: #fafafa;
 }
@@ -33,7 +86,7 @@ input[type=radio]:checked ~ .crowd-radio:after {
   height: 15px;
   top: 4px;
   left: 4px;
-  background-color: #3bb5aa;
+  background-color: hsl(176, 50%, 47%);
   border: solid 0.5px #f1f1f1;
   border-radius: 50%;
 }
@@ -47,15 +100,74 @@ input[type=radio]:checked ~ .crowd-radio:after {
   cursor: pointer;
 }
 
+.color-moderate-cyan {
+ color: hsl(176, 50%, 47%);
+}
+
+.card-backer-numbers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.card-title-pledge,
+.card-footer-select{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.card-backer-text {
+  font-size: 0.78rem;
+}
+
+.fs-1rem {
+  font-size: 1rem;
+}
+
 .card-footer {
   background-color: white;
 }
 
 .btn-primary {
-  background-color: #3cb4ab;
-  border: solid 1px #52b3a6;
+  background-color: hsl(176, 50%, 47%);
+  border: solid 1px hsl(176, 50%, 47%);
   border-radius: 25px;
   padding: 14px 30px;
+}
+
+.btn-secondary {
+  background-color: white;
+  border: solid 1px hsl(0, 0%, 48%);
+  border-radius: 25px;
+  padding: 14px 30px;
+  color: black;
+}
+
+.btn-secondary > b > span {
+  color: hsl(0, 0%, 48%);
+}
+
+.btn-primary:hover {
+  background-color: hsl(176, 72%, 28%);
+  border-color: hsl(176, 72%, 28%);
+}
+
+.btn-primary:active {
+  background-color: hsl(176, 72%, 28%) !important;
+  border-color: hsl(176, 72%, 28%) !important;
+}
+
+.btn-primary:disabled {
+  background-color: hsl(0, 0%, 48%);
+  border-color: hsl(0, 0%, 48%);
+}
+
+.nav-menu-mobile {
+  display: none;
 }
 
 .bookmark {
@@ -65,7 +177,7 @@ input[type=radio]:checked ~ .crowd-radio:after {
   color: #7c7c7c;
 }
 
-.bookmark > span {
+.bookmark > i {
   background-color: #2f2f2f;
   color: #b1b1b1;
   height: 100%;
@@ -73,4 +185,187 @@ input[type=radio]:checked ~ .crowd-radio:after {
   border-radius: 25px;
   margin-left: -1px;
   margin-right: 5px;
+}
+
+.bookmark:hover {
+  padding: 0 10px 0 0;
+  background-color: #f4f4f4;
+  border: 1px solid #f4f4f4;
+  color: #7c7c7c;
+  filter: opacity(0.8);
+}
+
+.bookmark.active:hover {
+  padding: 0 10px 0 0;
+  background-color: #f4f4f4;
+  border: 1px solid #f4f4f4;
+  color: hsl(176, 72%, 28%);
+  filter: opacity(0.8);
+}
+
+.bookmark > i {
+  background-color: #2f2f2f;
+  color: #b1b1b1;
+  height: 100%;
+  padding: 18px;
+  border-radius: 25px;
+  margin-left: -1px;
+  margin-right: 5px;
+}
+
+.bookmark:active {
+  padding: 0 10px 0 0;
+  background-color: #f4f4f4 !important;
+  border: 1px solid #f4f4f4 !important;
+  color: #7c7c7c !important;
+  filter: opacity(0.9) !important;
+}
+
+.bookmark.active {
+  padding: 0 10px 0 0;
+  background-color: #f4f4f4;
+  border: 1px solid #f4f4f4;
+  color: hsl(176, 72%, 28%);
+}
+
+.bookmark.active > i {
+  background-color: hsl(176, 72%, 28%);
+  color: white;
+  height: 100%;
+  padding: 18px;
+  border-radius: 25px;
+  margin-left: -1px;
+  margin-right: 5px;
+}
+
+.bookmark.active:active {
+  padding: 0 10px 0 0;
+  background-color: #f4f4f4 !important;
+  border: 1px solid #f4f4f4 !important;
+  color: hsl(176, 72%, 28%) !important;
+  filter: opacity(0.9) !important;
+}
+
+.card-disabled {
+  filter: opacity(0.5);
+}
+
+.backer-percentage-background {
+  background-color: #f4f4f4;
+  height: 20px;
+  border-radius: 15px;
+}
+
+.backer-percentage {
+  background-color: #39b4af;
+  height: 20px;
+  width: 80%;
+  border-radius: 15px;
+}
+
+.modal-card-pledge-footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-card-pledge-footer > p {
+  margin: 0;
+}
+
+@media screen and (max-width: 375px) {
+  header {
+    background: url("../../assets/images/image-hero-mobile.jpg") no-repeat;
+    background-size: contain;
+  }
+
+  .padding-top-header {
+    padding-top: 20px;
+  }
+
+  .main-content {
+    margin-top: -200px;
+  }
+
+  .card-backer-numbers {
+    flex-direction: column;
+  }
+
+  .nav-menu-mobile {
+    display: flex;
+  }
+
+  .nav-menu-desktop {
+    display: none !important;
+  }
+
+  .bookmark {
+    margin: 0;
+    padding: 0;
+  }
+
+  .bookmark:hover {
+    padding: 0;
+    background-color: #f4f4f4;
+    border: 1px solid #f4f4f4;
+    color: #7c7c7c;
+    filter: opacity(0.8);
+  }
+
+  .bookmark > i {
+    margin: 0;
+  }
+
+  .bookmark-text {
+    display: none;
+  }
+
+  .bookmark:active {
+    padding: 0;
+    background-color: #f4f4f4 !important;
+    border: 1px solid #f4f4f4 !important;
+    color: #7c7c7c !important;
+    filter: opacity(0.9) !important;
+  }
+
+  .bookmark.active {
+    padding: 0;
+    background-color: #f4f4f4;
+    border: 1px solid #f4f4f4;
+    color: hsl(176, 72%, 28%);
+  }
+
+  .bookmark.active > i {
+    margin: 0;
+  }
+
+  .bookmark.active:hover {
+    padding: 0;
+  }
+
+  .bookmark.active:active {
+    padding: 0;
+    background-color: #f4f4f4 !important;
+    border: 1px solid #f4f4f4 !important;
+    color: hsl(176, 72%, 28%) !important;
+    filter: opacity(0.9) !important;
+  }
+
+  .card-title-pledge,
+  .card-footer-select{
+    flex-direction: column;
+  }
+
+  .card-divider {
+    width: 30%;
+    height: 1px;
+    margin: 15px;
+    border-bottom: 1px hsl(0, 0%, 48%) solid;
+  }
+
+  .modal-card-pledge-footer {
+    flex-direction: column;
+  }
 }

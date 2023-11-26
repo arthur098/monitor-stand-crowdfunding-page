@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head >
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Crowdfund</title>
 
     <link rel="stylesheet" href="assets/bootstrap-5.3.2-dist/css/bootstrap.min.css">
@@ -11,13 +13,38 @@
 </head>
 <body>
 
-<main class="container">
-    <div class="card mt-5">
-        <div class="card-body">
-            <div class="text-center">
-                <span class="fa fa-poo-storm position-absolute" style="top: -5px;"></span>
+<header>
+    <div class="container d-flex flex-row flex-wrap justify-content-between align-content-between align-items-center w-100 padding-top-header">
+        <a href="#" class="logo">logo</a>
+        <nav>
+            <ul class="d-flex flex-row align-items-center align-content-between list-unstyled m-0 nav-menu-desktop">
+                <li class="m-3"><a href="javascript:void(0);">About</a></li>
+                <li class="m-3"><a href="javascript:void(0);">Discover</a></li>
+                <li class="m-3"><a href="javascript:void(0);">Get Started</a></li>
+            </ul>
+            <div class="dropstart nav-menu-mobile">
+                <button id="btn-mobile-menu" type="button" class="btn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="fa fa-bars" style="color: white;"></span>
+                </button>
+
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="javascript:void(0);">About</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="javascript:void(0);">Discover</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="javascript:void(0);">Get Started</a></li>
+                </ul>
             </div>
-            <h4 class="card-title text-center">Mastercraft Bamboo Monitor Riser</h4>
+        </nav>
+    </div>
+</header>
+<main class="container">
+    <div class="card main-content">
+        <div class="card-body">
+            <div class="d-flex align-content-center flex-wrap justify-content-center mb-4">
+                <img class="position-absolute" style="top: -30px;" src="assets/images/logo-mastercraft.svg" alt="Image mastercraft">
+            </div>
+            <h4 class="card-title text-center"><b>Mastercraft Bamboo Monitor Riser</b></h4>
             <p class="card-text text-center">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
 
             <br>
@@ -25,14 +52,14 @@
             <div class="d-flex flex-row justify-content-around flex-wrap">
                 <div class="d-flex flex-wrap justify-content-center">
                     <button id="btnModalBackThisProject" class="btn btn-primary" data-target="#modalBackThisProject">
-                        Back this project
+                        <b>Back this project</b>
                     </button>
                 </div>
 
                 <div class="d-flex flex-wrap justify-content-center">
                     <button class="btn btn-primary bookmark">
-                        <span class="fa fa-bookmark"></span>
-                        Bookmark
+                        <i class="fa fa-bookmark"></i>
+                        <span class="bookmark-text"><b>Bookmark</b></span>
                     </button>
                 </div>
             </div>
@@ -44,26 +71,28 @@
 
     <div class="card">
         <div class="card-body">
-            <div class="d-flex flex-row justify-content-between flex-wrap">
+            <div class="card-backer-numbers">
                 <div>
-                    <h4 class="card-title text-center">$89,914</h4>
-                    <p class="card-text text-center">of $100,000 backed</p>
+                    <h4 class="card-title text-center"><b>$89,914</b></h4>
+                    <p class="card-text text-center card-backer-text">of $100,000 backed</p>
                 </div>
+                <div class="card-divider"></div>
                 <div>
-                    <h4 class="card-title text-center">5,007</h4>
-                    <p class="card-text text-center">total backers</p>
+                    <h4 class="card-title text-center"><b>5,007</b></h4>
+                    <p class="card-text text-center card-backer-text">total backers</p>
                 </div>
+                <div class="card-divider"></div>
                 <div>
-                    <h4 class="card-title text-center">56</h4>
-                    <p class="card-text text-center">days left</p>
+                    <h4 class="card-title text-center"><b>56</b></h4>
+                    <p class="card-text text-center card-backer-text">days left</p>
                 </div>
             </div>
 
             <br>
 
             <div class="position-relative">
-                <div style="background-color: #39b4af; height: 20px; width: 80%; border-radius: 15px;" class="position-absolute z-1"></div>
-                <div style="background-color: #f4f4f4; height: 20px; border-radius: 15px;" class="position-absolute w-100"></div>
+                <div class="position-absolute z-1 backer-percentage"></div>
+                <div class="position-absolute w-100 backer-percentage-background"></div>
             </div>
             <br>
         </div>
@@ -74,26 +103,26 @@
     <div class="card">
         <div class="card-body">
 
-            <h4 class="card-title">About this project</h4>
+            <h4 class="card-title fs-1rem"><b>About this project</b></h4>
             <p class="card-text">The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve your posture and make you more comfortable while at work, helping you stay focused on the task at hand.</p>
             <p class="card-text">Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer to allow notepads, pens, and USB sticks to be stores under the stand.</p>
 
 
             <div class="card">
                 <div class="card-body">
-                    <div class="d-flex flex-row flex-nowrap justify-content-between">
-                        <h4 class="card-title">Bamboo Stand</h4>
-                        <p>Pledge $25 or more</p>
+                    <div class="card-title-pledge">
+                        <h4 class="card-title fs-1rem"><b>Bamboo Stand</b></h4>
+                        <p class="color-moderate-cyan"><b>Pledge $25 or more</b></p>
                     </div>
                     <p class="card-text">You get an ergonomic stand made of natural bamboo. You've helped us launch our
                         promotional campaign, and you'll be added to a special Backer member list.</p>
 
-                    <div class="d-flex flex-row flex-nowrap justify-content-between">
+                    <div class="card-footer-select">
                         <div class="d-flex flex-row align-items-center">
-                            <h4 class="card-title">101</h4>
-                            <h6>left</h6>
+                            <h4 class="card-title"><b>101</b></h4>
+                            <h6 class="text-stand-left">left</h6>
                         </div>
-                        <button class="btn btn-primary">Select Reward</button>
+                        <button class="btn btn-primary"><b>Select Reward</b></button>
                     </div>
                 </div>
             </div>
@@ -102,38 +131,38 @@
 
             <div class="card">
                 <div class="card-body">
-                    <div class="d-flex flex-row flex-nowrap justify-content-between">
-                        <h4 class="card-title">Black Edition Stand</h4>
-                        <p>Pledge $75 or more</p>
+                    <div class="card-title-pledge">
+                        <h4 class="card-title fs-1rem"><b>Black Edition Stand</b></h4>
+                        <p class="color-moderate-cyan"><b>Pledge $75 or more</b></p>
                     </div>
                     <p class="card-text">You get a Black Special Edition computer stand and a personal thank you. You'll be added to our Backer member list. Shipping is included.</p>
 
-                    <div class="d-flex flex-row flex-nowrap justify-content-between">
+                    <div class="card-footer-select">
                         <div class="d-flex flex-row align-items-center">
-                            <h4 class="card-title">64</h4>
-                            <h6>left</h6>
+                            <h4 class="card-title"><b>64</b></h4>
+                            <h6 class="text-stand-left">left</h6>
                         </div>
-                        <button class="btn btn-primary">Select Reward</button>
+                        <button class="btn btn-primary"><b>Select Reward</b></button>
                     </div>
                 </div>
             </div>
 
             <br/>
 
-            <div class="card">
+            <div class="card card-disabled">
                 <div class="card-body">
-                    <div class="d-flex flex-row flex-nowrap justify-content-between">
-                        <h4 class="card-title">Mohagany Special Edition</h4>
-                        <p>Pledge $200 or more</p>
+                    <div class="card-title-pledge">
+                        <h4 class="card-title fs-1rem"><b>Mohagany Special Edition</b></h4>
+                        <p class="color-moderate-cyan"><b>Pledge $200 or more</b></p>
                     </div>
                     <p class="card-text">You get two Special Edition Mohagany stands, a Backer T-Shirt and a personal thank you. You'll be added to our Backer member list. Shipping is included.</p>
 
-                    <div class="d-flex flex-row flex-nowrap justify-content-between">
+                    <div class="card-footer-select">
                         <div class="d-flex flex-row align-items-center">
-                            <h4 class="card-title">0</h4>
-                            <h6>left</h6>
+                            <h4 class="card-title"><b>0</b></h4>
+                            <h6 class="text-stand-left">left</h6>
                         </div>
-                        <button class="btn btn-primary">Out of stock</button>
+                        <button class="btn btn-primary" disabled><b>Out of stock</b></button>
                     </div>
                 </div>
             </div>
@@ -162,14 +191,9 @@
                                     <input type="radio" name="back">
                                     <span class="crowd-radio"></span>
                                 </div>
-                                <b>
-                                    <h4>Pledge with no reward</h4>
-                                </b>
+                                <h4 class="fs-1rem"><b>Pledge with no reward</b></h4>
                             </div>
                             <p class="card-text">Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.</p>
-                        </div>
-                        <div class="card-footer">
-                            <p>Enter your pledge</p>
                         </div>
                     </div>
 
@@ -182,20 +206,26 @@
                                     <input type="radio" name="back">
                                     <span class="crowd-radio"></span>
                                 </div>
-                                <b>
-                                    <h4>Bamboo Stand</h4>
-                                </b>
-                                <b>
-                                    <h4>Pledge $25 or more</h4>
-                                </b>
-                                <h4><b>101</b> left</h4>
+                                <h4 class="fs-1rem"><b>Bamboo Stand</b></h4>
+                                <h4 class="fs-1rem color-moderate-cyan"><b>Pledge $25 or more</b></h4>
+                                <h4 class="fs-1rem"><b>101</b> <span class="text-stand-left">left</span></h4>
                             </div>
                             <p class="card-text">You get an ergonomic stand made of natural bamboo. You've helped us
                                 launch our promotional campaign, and you'll be added to a special Backer member
                                 list.</p>
                         </div>
-                        <div class="card-footer">
+                        <div class="card-footer modal-card-pledge-footer">
+                            <br class="nav-menu-mobile">
                             <p>Enter your pledge</p>
+                            <br class="nav-menu-mobile">
+                            <div>
+                                <button class="btn btn-secondary">
+                                    <b><span>$</span>&nbsp; 25</b>
+                                </button>&nbsp;&nbsp;&nbsp;
+                                <button class="btn btn-primary">
+                                    <b>Continue</b>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -207,6 +237,7 @@
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
     <script src="assets/js/modal-apoie-projeto.js"></script>
+    <script src="assets/js/mobile.nav-menu.js"></script>
     <script src="assets/js/index.js"></script>
 
 </body>
